@@ -13,7 +13,7 @@ class BestSellerBookItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(RoutesManager.kBookDetailsView);
       },
       child: SizedBox(
@@ -67,10 +67,8 @@ class BestSellerBookItem extends StatelessWidget {
                       Text(
                         '19.33\$',
                         style: StyleManager.textStyle18.copyWith(
-                          fontWeight: FontWeight.bold,
-                            fontFamily: kGtSectraFine
-
-                        ),
+                            fontWeight: FontWeight.bold,
+                            fontFamily: kGtSectraFine),
                       ),
                       const Spacer(),
                       const BookRating()
@@ -85,4 +83,3 @@ class BestSellerBookItem extends StatelessWidget {
     );
   }
 }
-

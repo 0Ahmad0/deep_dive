@@ -1,20 +1,19 @@
 import 'package:dartz/dartz.dart';
-import 'package:deep_dive/features/home/domain/repositories/home_repo.dart';
+import '/features/home/domain/repositories/home_repo.dart';
 import '../../../../core/errors/failure.dart';
 import '../../../../core/use_cases/use_case.dart';
 import '../entities/book_entity.dart';
+import 'fetch_featured_books_usecase.dart';
 
-class FetchFeaturedBooksUseCase extends UseCase<List<BookEntity>, NoParam> {
+class FetchNewestBooksUseCase extends UseCase<List<BookEntity>, NoParam> {
   final HomeRepo homeRepo;
 
-  FetchFeaturedBooksUseCase({
+  FetchNewestBooksUseCase({
     required this.homeRepo,
   });
 
   @override
   Future<Either<Failure, List<BookEntity>>> call([NoParam? param]) async {
-    return await homeRepo.fetchFeaturedBooks();
+    return await homeRepo.fetchNewestBooks();
   }
 }
-
-class NoParam {}

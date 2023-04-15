@@ -20,9 +20,8 @@ class SlidingTextAnimation extends StatelessWidget {
             child: Text(
               StringsManager.splashText,
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width / 18
-              ),
+              style:
+                  TextStyle(fontSize: MediaQuery.of(context).size.width / 18),
             ),
           );
         });

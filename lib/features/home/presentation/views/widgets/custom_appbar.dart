@@ -12,10 +12,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-            horizontal: 16.0,
-            vertical: 16.0
-        ),
+        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
         child: Row(
           children: [
             Image.asset(
@@ -24,11 +21,13 @@ class CustomAppBar extends StatelessWidget {
               height: MediaQuery.of(context).size.width * 0.125,
             ),
             const Spacer(),
-            IconButton(onPressed: () {
-              GoRouter.of(context).push(RoutesManager.kSearchView);
-            }, icon: const Icon(
-              FontAwesomeIcons.magnifyingGlass,
-            ))
+            IconButton(
+                onPressed: () {
+                  GoRouter.of(context).push(RoutesManager.kSearchView);
+                },
+                icon: const Icon(
+                  FontAwesomeIcons.magnifyingGlass,
+                ))
           ],
         ),
       ),

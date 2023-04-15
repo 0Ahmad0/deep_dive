@@ -43,14 +43,8 @@ class _SplashViewBodyState extends State<SplashViewBody>
       children: [
         Image.asset(
           AssetsManager.logo,
-          width: MediaQuery
-              .of(context)
-              .size
-              .width / 2,
-          height: MediaQuery
-              .of(context)
-              .size
-              .width / 2,
+          width: MediaQuery.of(context).size.width / 2,
+          height: MediaQuery.of(context).size.width / 2,
         ),
         const SizedBox(
           height: 20.0,
@@ -65,12 +59,11 @@ class _SplashViewBodyState extends State<SplashViewBody>
       vsync: this,
       duration: Duration(seconds: 2),
     );
-    slidingAnimation = Tween<Offset>(
-        begin: Offset(0, 10),
-        end: Offset.zero
-    ).animate(animationController);
+    slidingAnimation = Tween<Offset>(begin: Offset(0, 10), end: Offset.zero)
+        .animate(animationController);
     animationController.forward();
   }
+
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 3), () {
       GoRouter.of(context).replace(RoutesManager.kHomeView);

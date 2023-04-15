@@ -29,7 +29,6 @@ class HomeViewBody extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
-
                 child: Text(
                   StringsManager.homeTitleText,
                   style: StyleManager.textStyle18,
@@ -41,7 +40,7 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-      const SliverFillRemaining(
+        const SliverFillRemaining(
           child: Padding(
             padding: const EdgeInsets.only(left: 20.0),
             child: BestSellerListView(),
@@ -51,4 +50,3 @@ class HomeViewBody extends StatelessWidget {
     );
   }
 }
-

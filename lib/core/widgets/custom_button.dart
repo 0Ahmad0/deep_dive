@@ -5,7 +5,7 @@ class CustomButton extends StatelessWidget {
   const CustomButton(
       {Key? key,
       required this.text,
-       this.borderRadius,
+      this.borderRadius,
       required this.backGroundColor,
       required this.textColor,
       this.fontSize = 14.0})
@@ -19,9 +19,8 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-
         style: TextButton.styleFrom(
-          foregroundColor: Theme.of(context).scaffoldBackgroundColor,
+            foregroundColor: Theme.of(context).scaffoldBackgroundColor,
             backgroundColor: backGroundColor,
             minimumSize: Size(double.infinity, 60),
             shape: RoundedRectangleBorder(
@@ -31,10 +30,9 @@ class CustomButton extends StatelessWidget {
           child: Text(
             text,
             style: StyleManager.textStyle20.copyWith(
-              color: textColor,
-              fontWeight: FontWeight.w900,
-              fontSize: fontSize
-            ),
+                color: textColor,
+                fontWeight: FontWeight.w900,
+                fontSize: fontSize),
           ),
         ));
   }

@@ -16,7 +16,6 @@ class CustomBookDetailsAppBar extends StatelessWidget {
         ),
         const Spacer(),
         IconButton(onPressed: () {}, icon: Icon(Icons.shopping_cart_outlined))
-
       ],
     );
   }
