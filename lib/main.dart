@@ -10,10 +10,13 @@ import 'package:flutter/material.dart';
 import 'features/splash/presentation/views/splash_view.dart';
 
 void main() async {
-  runApp(const DeepDive());
-  
+  await WidgetsFlutterBinding.ensureInitialized();
+  await Hive.initFlutter();
   Hive.registerAdapter(BookEntityAdapter());
-  await Hive.openBox(kFeaturedBox);
+  await Hive.openBox<BookEntity>(kFeaturedBox);
+  await Hive.openBox<BookEntity>(kNewestdBox);
+  runApp(const DeepDive());
+
 }
 
 class DeepDive extends StatelessWidget {

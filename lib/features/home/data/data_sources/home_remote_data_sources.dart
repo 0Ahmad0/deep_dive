@@ -1,3 +1,7 @@
+import 'package:deep_dive/constants.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+
+import '../../../../core/utils/functions/save_data.dart';
 import '/core/utils/api_service.dart';
 import '/features/home/data/models/book_model/book_model.dart';
 import '/features/home/domain/entities/book_entity.dart';
@@ -18,14 +22,16 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
     var data = await apiService.get(
         endPoint: 'volumes?Filtering=free-ebooks&q=programming');
     List<BookEntity> books = getBooksList(data);
+    saveBooksData(books, kFeaturedBox);
     return books;
   }
 
   @override
-  Future<List<BookEntity>> fetchNewestBooks() async{
+  Future<List<BookEntity>> fetchNewestBooks() async {
     var data = await apiService.get(
         endPoint: 'volumes?Filtering=free-ebooks&Sorting=newest&q=programming');
     List<BookEntity> books = getBooksList(data);
+    saveBooksData(books, kNewestdBox);
     return books;
   }
 

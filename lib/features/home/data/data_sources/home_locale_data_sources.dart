@@ -1,3 +1,6 @@
+import 'package:deep_dive/constants.dart';
+import 'package:hive/hive.dart';
+
 import '/core/utils/api_service.dart';
 import '/features/home/data/models/book_model/book_model.dart';
 import '/features/home/domain/entities/book_entity.dart';
@@ -11,16 +14,13 @@ abstract class HomeLocalDataSource {
 class HomeLocalDataSourceImpl extends HomeLocalDataSource {
   @override
   List<BookEntity> fetchFeaturedBooks() {
-    // TODO: implement fetchFeaturedBooks
-    throw UnimplementedError();
+    var box = Hive.box<BookEntity>(kFeaturedBox);
+    return box.values.toList();
   }
 
   @override
   List<BookEntity> fetchNewestBooks() {
-    // TODO: implement fetchNewestBooks
-    throw UnimplementedError();
+    var box = Hive.box<BookEntity>(kNewestdBox);
+    return box.values.toList();
   }
-
-
-
 }
