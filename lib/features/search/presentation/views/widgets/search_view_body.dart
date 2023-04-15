@@ -1,4 +1,4 @@
-import 'package:deep_dive/core/utils/strings_manager.dart';
+import '/core/utils/strings_manager.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

@@ -1,7 +1,7 @@
-import 'package:deep_dive/core/utils/assets_manager.dart';
-import 'package:deep_dive/core/utils/routes_manager.dart';
-import 'package:deep_dive/core/utils/strings_manager.dart';
-import 'package:deep_dive/features/home/presentation/views/home_view.dart';
+import '/core/utils/assets_manager.dart';
+import '/core/utils/routes_manager.dart';
+import '/core/utils/strings_manager.dart';
+import '/features/home/presentation/views/home_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

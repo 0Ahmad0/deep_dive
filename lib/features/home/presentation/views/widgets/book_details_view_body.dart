@@ -1,10 +1,8 @@
-import 'package:deep_dive/core/utils/styles_manager.dart';
-import 'package:deep_dive/core/utils/widgets/custom_button.dart';
-import 'package:deep_dive/features/home/presentation/views/widgets/book_rating.dart';
-import 'package:deep_dive/features/home/presentation/views/widgets/custom_book_item.dart';
+import '/core/utils/styles_manager.dart';
+import '/features/home/presentation/views/widgets/book_rating.dart';
+import '/features/home/presentation/views/widgets/custom_book_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'best_seller_item.dart';
 import 'books_action.dart';
 import 'custom_book_details_appbar.dart';

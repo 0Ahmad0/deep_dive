@@ -1,4 +1,4 @@
-import 'package:deep_dive/core/utils/routes_manager.dart';
+import '/core/utils/routes_manager.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
