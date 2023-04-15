@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../../../../../core/utils/style_manager.dart';
+import '../../../../../core/utils/styles_manager.dart';
 
 class BookRating extends StatelessWidget {
   const BookRating({
