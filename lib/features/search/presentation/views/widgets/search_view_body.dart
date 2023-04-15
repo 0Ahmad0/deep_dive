@@ -3,6 +3,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../../../core/utils/styles_manager.dart';
+import '../../../../home/presentation/views/widgets/best_seller_item.dart';
+import 'custom_search_textfiled.dart';
+
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({Key? key}) : super(key: key);
 
@@ -12,36 +16,41 @@ class SearchViewBody extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
-          children: [CustomSearchTextFiled()],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            CustomSearchTextFiled(),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              StringsManager.searchResultText,
+              style: StyleManager.textStyle18,
+            ),
+            const SizedBox(
+              height: 20.0,
+            ),
+            Expanded(child: SearchResultListView()),
+          ],
         ),
       ),
     );
   }
 }
 
-class CustomSearchTextFiled extends StatelessWidget {
-  const CustomSearchTextFiled({Key? key}) : super(key: key);
+class SearchResultListView extends StatelessWidget {
+  const SearchResultListView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-          enabledBorder: buildOutlineInputBorder(),
-          focusedBorder: buildOutlineInputBorder(),
-          hintText: StringsManager.searchText,
-          suffixIcon: IconButton(
-            onPressed: () {},
-            icon: Icon(
-              FontAwesomeIcons.magnifyingGlass,
-              size: 20.0,
-            ),
-          )),
+    return ListView.builder(
+      padding: EdgeInsets.zero,
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0),
+          child: const BestSellerBookItem(),
+        );
+      },
+      itemCount: 10,
     );
-  }
-
-  OutlineInputBorder buildOutlineInputBorder() {
-    return OutlineInputBorder(
-        borderRadius: BorderRadius.circular(8.0),
-        borderSide: BorderSide(color: Colors.white));
   }
 }
