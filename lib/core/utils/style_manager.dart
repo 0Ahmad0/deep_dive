@@ -10,7 +10,6 @@ abstract class StyleManager {
   static const textStyle20 = TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.normal,
-    fontFamily: kGtSectraFine,
   );
   static const textStyle14 = TextStyle(
     fontSize: 14,
@@ -20,9 +19,9 @@ abstract class StyleManager {
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
-  static const textStyle30 = TextStyle(
-    fontSize: 30,
-    fontWeight: FontWeight.w600,
+  static const textStyle26 = TextStyle(
+    fontSize: 26,
+    fontWeight: FontWeight.w900,
     fontFamily: kGtSectraFine,
   );
 }

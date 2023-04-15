@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import '../../../../../constants.dart';
 import '../../../../../core/utils/style_manager.dart';
+import 'book_rating.dart';
 
 class BestSellerBookItem extends StatelessWidget {
   const BestSellerBookItem({Key? key}) : super(key: key);
@@ -36,46 +39,35 @@ class BestSellerBookItem extends StatelessWidget {
               children: [
                 ListTile(
                   contentPadding: EdgeInsets.zero,
-                  title: Text('Harry Potter and the Gobiet of Fire',
-                  style: StyleManager.textStyle20,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,),
-                  subtitle: Padding(
-                    padding: const EdgeInsets.only(
-                      top: 14.0
+                  title: Text(
+                    'Harry Potter and the Gobiet of Fire',
+                    style: StyleManager.textStyle20.copyWith(
+                      fontFamily: kGtSectraFine,
                     ),
-                    child: Text('JK Rowing',style: StyleManager.textStyle18,),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                  subtitle: Padding(
+                    padding: const EdgeInsets.only(top: 10.0),
+                    child: Text(
+                      'J.K Rowing',
+                      style: StyleManager.textStyle16,
+                    ),
                   ),
                 ),
                 Spacer(),
                 Row(
                   children: [
-                    Text('19.33\$',style: StyleManager.textStyle30,),
-                    Spacer(),
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16.0),
-                      child: Row(
-                        children: [
-                          Icon(
-                            Icons.star,
-                            color: Colors.yellowAccent,
-                          ),
-                          Text.rich(TextSpan(children: [
-                            TextSpan(
-                              text: '4.4',
-                              style: StyleManager.textStyle20
-                            ),
-                            TextSpan(text: ' '),
-                            TextSpan(
-                              text: '(13.8)',
-                                style: StyleManager.textStyle14.copyWith(
-                                  color: Colors.grey
-                                )
-                            ),
-                          ]))
-                        ],
+                    Text(
+                      '19.33\$',
+                      style: StyleManager.textStyle18.copyWith(
+                        fontWeight: FontWeight.bold,
+                          fontFamily: kGtSectraFine
+
                       ),
-                    )
+                    ),
+                    const Spacer(),
+                    const BookRating()
                   ],
                 )
               ],
@@ -86,3 +78,4 @@ class BestSellerBookItem extends StatelessWidget {
     );
   }
 }
+
